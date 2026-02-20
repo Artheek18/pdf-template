@@ -1,0 +1,8 @@
+# Ignore virtual environment directory
+venv/
+
+# Ignore JetBrains project files
+.idea/
+
+# Ignore all PDF files
+*.pdf

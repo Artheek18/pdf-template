@@ -1,4 +1,4 @@
-import UploadCsv from "./components/UploadCsv";
+import UploadCsv from "./components/UploadCSV.jsx";
 
 export default function App() {
   return (

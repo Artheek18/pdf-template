@@ -47,7 +47,7 @@ Order,Topic,Pages
 3,Machine Learning Basics,4
 ---
 
-#🛠 Tech Stack
+# 🛠 Tech Stack
 Backend
 Language: Python
 

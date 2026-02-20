@@ -30,7 +30,6 @@ backend/.pytest_cache/
 # Node / React / Vite
 # =========================
 node_modules/
-dist/
 build/
 
 # Vite env files

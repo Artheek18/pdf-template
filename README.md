@@ -81,7 +81,6 @@ Delivery: The user receives a Direct Download Response.
 
 # 🧑‍💻 Local Development
 **Backend**
-Bash
 
 cd backend
 
@@ -96,7 +95,6 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 
 **Frontend**
-Bash
 
 cd frontend
 

@@ -80,17 +80,27 @@ Storage: A temporary PDF file is created and served via the API.
 Delivery: The user receives a Direct Download Response.
 
 # 🧑‍💻 Local Development
-Backend
+**Backend**
 Bash
+
 cd backend
+
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+
+source venv/bin/activate 
+# Windows: venv\Scripts\activate
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
-Frontend
+
+**Frontend**
 Bash
+
 cd frontend
+
 npm install
+
 npm run dev
 
 # 📈 Future Improvements

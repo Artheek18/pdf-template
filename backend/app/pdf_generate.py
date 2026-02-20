@@ -4,7 +4,7 @@ import pandas as pd
 import fpdf
 print("fpdf version:", fpdf.__version__)
 
-df = pd.read_csv("topics.csv")
+df = pd.read_csv("../topics.csv")
 pdf = FPDF(orientation='P',unit='mm',format = 'A4')
 pdf.set_auto_page_break(auto=False, margin=0)
 
@@ -100,5 +100,5 @@ for order, topic, start_page in toc_entries:
     pdf.cell(dots_width, 8, dots, ln=0)
     pdf.cell(0, 8, right_text, ln=1, align="R")
 
-pdf.page = len(pdf.pages)-1
-pdf.output("output.pdf")
+pdf.page = len(pdf.pages)
+pdf.output("../output.pdf")

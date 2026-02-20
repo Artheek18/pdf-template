@@ -86,7 +86,7 @@ export default function UploadCsv() {
           {file ? (
             <span style={{ color: "var(--text)" }}>{file.name}</span>
           ) : (
-            "Click to upload topics.csv"
+            "Click to upload a .csv file with those headers"
           )}
           <input
             type="file"

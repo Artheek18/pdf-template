@@ -10,7 +10,7 @@ export default function App() {
       }}
     >
       <h1 style={{ fontSize: 36, marginBottom: 8 }}>
-        PDF Lesson Generator
+        PDF Notes Generator
       </h1>
 
       <p style={{ color: "var(--muted)", marginBottom: 32 }}>

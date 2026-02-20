@@ -100,4 +100,4 @@ def build_pdf_from_df(df: pd.DataFrame, output_path: str) -> None:
         pdf.cell(0, 8, right_text, ln=1, align="R")
 
     pdf.page = len(pdf.pages)
-    pdf.output("output_path.pdf")
+    pdf.output(output_path)

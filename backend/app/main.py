@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, BackgroundTasks
 from fastapi.responses import FileResponse
 import pandas as pd
 import io
@@ -17,7 +17,7 @@ def health():
 
 
 @app.post("/generate")
-async def generate(file: UploadFile = File(...)):
+async def generate(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
     # Basic file check
     if not file.filename.lower().endswith(".csv"):
         raise HTTPException(status_code=400, detail="Please upload a .csv file")
@@ -44,9 +44,11 @@ async def generate(file: UploadFile = File(...)):
 
     build_pdf_from_df(df, output_path=tmp_path)
 
-    # 5) Return as a download
+    background_tasks.add_task(os.remove, tmp_path)
+
     return FileResponse(
         path=tmp_path,
         media_type="application/pdf",
         filename="lesson-notes.pdf",
+        background=background_tasks,
     )
